@@ -1,5 +1,5 @@
-import 'package:delta_live/view/home_view.dart';
 import 'package:delta_live/model/splash_model.dart';
+import 'package:delta_live/view/navigation.dart';
 import 'package:flutter/material.dart';
 
 class SplashController {
@@ -12,7 +12,7 @@ class SplashController {
     // Navigate to the home screen after loading resources.
     Navigator.pushReplacement(
       context,
-      MaterialPageRoute(builder: (context) => const HomeView()),
+      MaterialPageRoute(builder: (context) => const Navigation()),
     );
   }
 }
