@@ -23,12 +23,6 @@ class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        // elevation: 1,
-        backgroundColor: Color(0xFF262B36),
-        title: const Text('Delta Live'),
-      ),
       backgroundColor: Color(0xFF262B36),
       body: FutureBuilder<List<dynamic>>(
         future: _matches,

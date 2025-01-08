@@ -25,19 +25,38 @@ class _NavigationState extends State<Navigation> {
     return Scaffold(
       body: view[selectedIndex],
       bottomNavigationBar: Container(
+        decoration: BoxDecoration(color: Colors.transparent),
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 5),
           child: GNav(
-            tabBackgroundColor: Colors.grey,
-            gap: 8,
-            padding: EdgeInsets.all(16),
+            tabBorderRadius: 20,
+            backgroundColor: Colors.transparent,
+            gap: 5,
+            iconSize: 25,
+            padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
             tabs: [
               GButton(
-                icon: Icons.home,
-                text: "Home",
+                icon: Icons.live_tv,
+                text: "Matches",
+                textColor: Colors.red,
+                iconColor: Colors.red,
+                iconActiveColor: Colors.red,
+                active: true,
               ),
-              GButton(icon: Icons.favorite, text: "Home"),
-              GButton(icon: Icons.settings, text: "Home")
+              GButton(
+                icon: Icons.account_circle,
+                text: "Account",
+                textColor: Colors.blueAccent,
+                iconColor: Colors.blueAccent,
+                iconActiveColor: Colors.blueAccent,
+              ),
+              GButton(
+                icon: Icons.info,
+                text: "About",
+                textColor: Colors.yellowAccent,
+                iconColor: Colors.yellowAccent,
+                iconActiveColor: Colors.yellowAccent,
+              )
             ],
             selectedIndex: selectedIndex,
             onTabChange: (index) {
